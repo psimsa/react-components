@@ -20,4 +20,5 @@ HelloWorld.args = {
 export const ClickMe = Template.bind({});
 ClickMe.args = {
     label: "Click me!",
+    onClick: () => console.log("Clicked!"),
 };

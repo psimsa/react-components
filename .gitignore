@@ -105,3 +105,5 @@ dist
 
 # Storybook output
 storybook-static
+
+.idea/

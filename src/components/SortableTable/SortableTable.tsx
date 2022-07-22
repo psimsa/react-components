@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import {Table} from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Table } from 'react-bootstrap'
 
 import './SortableTable.css'
 
-import {ColumnInformation} from "./ColumnInformation";
-import {SortableTableProps} from "./SortableTableProps";
+import { ColumnInformation } from './ColumnInformation'
+import { SortableTableProps } from './SortableTableProps'
 
 interface SortableTableState<T> {
   columns: Array<ColumnInformation<T>>
@@ -80,7 +80,7 @@ export const SortableTable: React.FC<SortableTableProps<any>> = (props) => {
           >
             {state.columns.filter(c => !c.hidden).map(column => (
               <td key={column.name as string} className={column.extraClasses}>
-                {column.value
+                {(column.value != null)
                   ? column.value(row)
                   : row[column.name]}
               </td>

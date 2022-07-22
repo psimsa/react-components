@@ -1,4 +1,4 @@
-﻿import {ColumnInformation} from "./ColumnInformation";
+import { ColumnInformation } from './ColumnInformation'
 
 export interface SortableTableProps<T> {
   columns: Array<ColumnInformation<T>>

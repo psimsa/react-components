@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { SortableTable } from './SortableTable'
 import userEvent from '@testing-library/user-event'
-import {ColumnInformation} from "./ColumnInformation";
+import { ColumnInformation } from './ColumnInformation'
 
 interface Entry {
   id: number
@@ -37,7 +37,7 @@ beforeEach(() => {
 
 describe('SortableTable should', () => {
   it('render', () => {
-    render(<SortableTable data={data} columns={columns}/>)
+    render(<SortableTable data={data} columns={columns} />)
     const rows = getAllRows()
     expect(rows.length).toBe(3)
     expect((rows[0]).cells[0].textContent).toBe('ID')
@@ -52,13 +52,13 @@ describe('SortableTable should', () => {
   })
 
   it('render with custom element', () => {
-    let cols: ColumnInformation<any>[] = [{
+    const cols: Array<ColumnInformation<any>> = [{
       name: 'col1',
-      value: e => (<span className="customClass">{e.prop1} {e.prop2}</span>),
+      value: e => (<span className='customClass'>{e.prop1} {e.prop2}</span>),
       label: 'Column 1'
     }]
-    const { container } = render(<SortableTable data={[{ prop1: 'hello', prop2: 'world' }]} columns={cols}/>)
-    var selection = container.querySelector('table tr td span.customClass')
+    const { container } = render(<SortableTable data={[{ prop1: 'hello', prop2: 'world' }]} columns={cols} />)
+    const selection = container.querySelector('table tr td span.customClass')
     expect(selection).toBeTruthy()
     if (selection !== null) {
       expect(selection.textContent).toBe('hello world')
@@ -66,7 +66,7 @@ describe('SortableTable should', () => {
   })
 
   it('sort', async () => {
-    render(<SortableTable data={data} columns={columns}/>)
+    render(<SortableTable data={data} columns={columns} />)
     const rows = getAllRows()
 
     const surnameHeader = (rows[0]).cells[2].getElementsByTagName('i').item(0)
@@ -80,7 +80,7 @@ describe('SortableTable should', () => {
 
   it('trigger onSort', async () => {
     const onSort = jest.fn()
-    render(<SortableTable data={data} columns={columns} onSort={onSort}/>)
+    render(<SortableTable data={data} columns={columns} onSort={onSort} />)
     const rows = getAllRows()
     const surnameHeader = (rows[0]).cells[2].getElementsByTagName('i').item(0)
     await userEvent.click(surnameHeader as Element)
@@ -89,7 +89,7 @@ describe('SortableTable should', () => {
   })
 
   it('change sort order when clicked twice', async () => {
-    render(<SortableTable data={data} columns={columns}/>)
+    render(<SortableTable data={data} columns={columns} />)
     const rows = getAllRows()
     const surnameHeader = (rows[0]).cells[2].getElementsByTagName('i').item(0)
     await userEvent.click(surnameHeader as Element)
@@ -128,7 +128,7 @@ describe('SortableTable should', () => {
   })
 
   it('change sort icon style when clicked', async () => {
-    render(<SortableTable data={data} columns={columns}/>)
+    render(<SortableTable data={data} columns={columns} />)
     const rows = getAllRows()
     const surnameHeader = (rows[0]).cells[2].getElementsByTagName('i').item(0) as Element
 
@@ -154,7 +154,7 @@ describe('SortableTable should', () => {
 
   it('invoke click function when clicked', async () => {
     const onClick = jest.fn()
-    render(<SortableTable data={data} columns={columns} onClick={onClick}/>)
+    render(<SortableTable data={data} columns={columns} onClick={onClick} />)
     const rows = getAllRows()
     const item = rows[2].cells[1]
     await userEvent.click(item)

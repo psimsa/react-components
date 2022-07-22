@@ -1,4 +1,4 @@
-﻿export interface ColumnInformation<T> {
+export interface ColumnInformation<T> {
   name: keyof T
   value?: ((value: T) => JSX.Element)
   label: string

@@ -30,7 +30,8 @@ export default [
 
       // NEW
       postcss()
-    ]
+    ],
+    external: ['react', 'react-dom']
   },
   {
     input: 'dist/esm/types/index.d.ts',
@@ -38,6 +39,6 @@ export default [
     plugins: [dts()],
 
     // NEW
-    external: [/\.css$/, 'react', 'react-dom']
+    external: [/\.css$/]
   }
 ]

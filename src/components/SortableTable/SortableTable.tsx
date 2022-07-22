@@ -26,7 +26,7 @@ export const SortableTable: React.FC<SortableTableProps<any>> = (props) => {
       }
       return c
     }),
-    data: props.data,
+    data: [...props.data],
     sortColumn: props.columns[0]
   })
   useEffect(() => {

@@ -48,5 +48,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
         with:
-          min-versions-to-keep: 5
+          min-versions-to-keep: 10
           package-name: react-components

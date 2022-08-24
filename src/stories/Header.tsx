@@ -3,11 +3,11 @@ import React from 'react'
 import { Button } from './Button'
 import './header.css'
 
-interface User {
+export interface User {
   name: string
 }
 
-interface HeaderProps {
+export interface HeaderProps {
   user?: User
   onLogin: () => void
   onLogout: () => void

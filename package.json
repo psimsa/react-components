@@ -52,7 +52,7 @@
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
     "rollup": "2.79.0",
-    "rollup-plugin-dts": "4.2.2",
+    "rollup-plugin-dts": "4.2.3",
     "rollup-plugin-postcss": "4.0.2",
     "ts-standard": "11.0.0",
     "tslib": "2.4.0",

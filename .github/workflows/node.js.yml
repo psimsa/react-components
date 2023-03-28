@@ -43,7 +43,7 @@ jobs:
           npm version $NEW_PACKAGE_VERSION --no-git-tag-version
           npm publish
       - name: Delete old package versions
-        uses: actions/delete-package-versions@v3
+        uses: actions/delete-package-versions@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}

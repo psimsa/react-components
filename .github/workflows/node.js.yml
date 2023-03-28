@@ -42,11 +42,11 @@ jobs:
           echo "New package version: $NEW_PACKAGE_VERSION"
           npm version $NEW_PACKAGE_VERSION --no-git-tag-version
           npm publish
-      - name: Delete old package versions
-        uses: actions/delete-package-versions@v4
-        if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
-        with:
-          min-versions-to-keep: 10
-          package-name: react-components
+    #  - name: Delete old package versions
+    #    uses: actions/delete-package-versions@v4
+    #    if: ${{ github.ref == 'refs/heads/main' }}
+    #    env:
+    #      NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+    #    with:
+    #      min-versions-to-keep: 10
+    #      package-name: react-components

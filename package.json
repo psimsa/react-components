@@ -1,5 +1,5 @@
 {
-  "name": "@ofcoursedude/react-components",
+  "name": "@psimsa/react-components",
   "version": "1.1.1",
   "description": "",
   "main": "dist/cjs/index.js",
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ofcoursedude/react-components.git"
+    "url": "git+https://github.com/psimsa/react-components.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ofcoursedude/react-components/issues"
+    "url": "https://github.com/psimsa/react-components/issues"
   },
-  "homepage": "https://github.com/ofcoursedude/react-components#readme",
+  "homepage": "https://github.com/psimsa/react-components#readme",
   "devDependencies": {
     "@babel/core": "7.19.0",
     "@babel/preset-env": "7.19.0",
@@ -62,7 +62,7 @@
     "react-dom": "18.2.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/ofcoursedude"
+    "registry": "https://npm.pkg.github.com/psimsa"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",

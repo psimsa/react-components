@@ -29,7 +29,7 @@
   "homepage": "https://github.com/psimsa/react-components#readme",
   "devDependencies": {
     "@babel/core": "7.23.7",
-    "@babel/preset-env": "7.23.7",
+    "@babel/preset-env": "7.23.8",
     "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.3",
     "@rollup/plugin-commonjs": "22.0.2",

@@ -50,7 +50,7 @@
     "babel-loader": "8.4.1",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "14.6.0",
+    "@testing-library/user-event": "14.6.1",
     "rollup": "2.79.2",
     "rollup-plugin-dts": "4.2.3",
     "rollup-plugin-postcss": "4.0.2",

@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/psimsa/react-components#readme",
   "devDependencies": {
-    "@babel/core": "7.27.1",
+    "@babel/core": "7.27.3",
     "@babel/preset-env": "7.27.2",
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
@@ -43,7 +43,7 @@
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/react": "6.5.16",
     "@storybook/testing-library": "0.2.2",
-    "@types/react": "18.3.22",
+    "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
     "react-scripts": "5.0.1",
     "babel-jest": "28.1.3",
